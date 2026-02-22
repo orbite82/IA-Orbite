@@ -16,9 +16,12 @@ IA-Estudos
 
 💻 Linux (Pop!_OS 24.04 no seu caso)
 
+```
+---
+
 1️⃣ Instalar dependências
 
-# Instalar Docker
+Instalar Docker
 
 ```
 sudo apt install docker.io -y
