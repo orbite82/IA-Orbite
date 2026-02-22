@@ -3,7 +3,8 @@
 </div>
 
 # IA-Orbite
-
+---
+```
 IA-Estudos
 
 ✅ Arquitetura que vamos usar
@@ -16,8 +17,10 @@ IA-Estudos
 
 💻 Linux (Pop!_OS 24.04 no seu caso)
 
-1️⃣ Instalar dependências
+```
+---
 
+1️⃣ Instalar dependências
 
 # Instalar Docker
 
@@ -138,3 +141,4 @@ cluster-local-worker
 ```
 terraform destroy
 ```
+---
