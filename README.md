@@ -3,8 +3,7 @@
 </div>
 
 # IA-Orbite
----
-```
+
 IA-Estudos
 
 ✅ Arquitetura que vamos usar
@@ -17,13 +16,11 @@ IA-Estudos
 
 💻 Linux (Pop!_OS 24.04 no seu caso)
 
-```
----
-
 1️⃣ Instalar dependências
 
 # Instalar Docker
 
+```
 sudo apt install docker.io -y
 sudo systemctl enable docker
 sudo systemctl start docker
