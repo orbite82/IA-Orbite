@@ -24,8 +24,6 @@ IA-Estudos
 
 # Instalar Docker
 
----
-```
 sudo apt install docker.io -y
 sudo systemctl enable docker
 sudo systemctl start docker
