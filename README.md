@@ -20,8 +20,23 @@ sudo usermod -aG docker $USER
 
 ⚠ Depois disso, faça logout/login novamente.
 
-Instalar kubectl
-sudo apt install kubectl -y
+✅ Instalar kubectl no Pop!_OS 24.04
+1️⃣ Atualizar dependências
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl
+
+2️⃣ Adicionar chave GPG oficial
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+3️⃣ Adicionar repositório oficial
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+5️⃣ Verificar instalação
+kubectl version --client
+
+-----------
+
 Instalar KIND
 
 Projeto oficial: KIND
@@ -53,7 +68,7 @@ terraform {
 
 provider "kind" {}
 
-resource "kind_cluster" "default" {
+resource "kind_cluster" "IA" {
   name = "cluster-local"
 
   kind_config {
@@ -72,18 +87,3 @@ resource "kind_cluster" "default" {
 
 3️⃣ Inicializar Terraform
 terraform init
-
-4️⃣ Criar o cluster
-terraform apply
-
-Digite yes quando pedir confirmação.
-
-5️⃣ Verificar se subiu
-kubectl get nodes
-
-Você deve ver:
-
-cluster-local-control-plane
-cluster-local-worker
-🔥 Para destruir o cluster
-terraform destroy
