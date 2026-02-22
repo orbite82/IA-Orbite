@@ -33,6 +33,7 @@ sudo mv ./kind /usr/local/bin/kind
 Testar:
 
 kind --version
+
 2️⃣ Criar projeto Terraform
 
 Crie uma pasta:
@@ -68,8 +69,10 @@ resource "kind_cluster" "default" {
     }
   }
 }
+
 3️⃣ Inicializar Terraform
 terraform init
+
 4️⃣ Criar o cluster
 terraform apply
 
