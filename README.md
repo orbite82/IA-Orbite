@@ -125,3 +125,16 @@ terraform init
 ```
 kubectl get nodes
 ```
+
+Você deve ver:
+
+```
+cluster-local-control-plane
+cluster-local-worker
+```
+
+🔥 Para destruir o cluster
+
+```
+terraform destroy
+```
