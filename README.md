@@ -7,6 +7,14 @@
 
 IA-Estudos
 
+## 🔐 Segurança
+
+Este projeto não armazena credenciais sensíveis.
+Variáveis secretas devem ser definidas via:
+- Variáveis de ambiente
+- Arquivo .env (não versionado)
+- Terraform Cloud / CI Secrets
+
 ✅ Arquitetura que vamos usar
 
 🐳 Docker → runtime
